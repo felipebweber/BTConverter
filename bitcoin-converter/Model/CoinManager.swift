@@ -35,7 +35,7 @@ class CoinManager {
         coinApiTeste.fetchCoinRequest { (dictionay) in
             DispatchQueue.main.async {
                 self.parseJSON(dictionay)
-                self.retreiveData(currency: "USD")
+                self.retrieveData(currency: "USD")
             }
         }
         
@@ -80,7 +80,7 @@ extension CoinManager {
         }
     }
     
-    func retreiveData(currency: String) {
+    func retrieveData(currency: String) {
         
         let fetchRequest: NSFetchRequest<CoinEntity> = CoinEntity.fetchRequest()
         let sortCurrency = NSSortDescriptor(key: "currency", ascending: true)
